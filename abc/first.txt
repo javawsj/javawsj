@@ -2,10 +2,17 @@ javawsj@126.com
 
 
 
+git  reflog  
+
+- 作用 :  (可以切换到任意版本)  查看所有的版本信息
 
 
 
 
+git log
+
+- 作用：查看提交日志
+- `git log` 查看提交的日志
 
 
 
