@@ -1,0 +1,391 @@
+javawsj@126.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+vue2 与 vu3 
+
+Vue3 动机 和 新特性
+
+Vite 的使用
+
+composition API vs options API
+
+体验 composition API
+setup | reactive | ref | watch  函数
+
+
+升级后的vue-router4
+
+
+Pinia  与  vuex
+
+pinia模块化
+
+
+jar 管理  maven
+
+git 代码版本管理   gitHub
+
+Spring boot + Mybatis + vue3
+
+
+
+
+Spring MVC + Spring + Mybatis   SSM
+
+
+
+jsp + Servlet + dbutils
+
+
+
+
+
+你
+
+https://maven.aliyun.com/repository/public
+https://maven.aliyun.com/nexus/content/groups/public
+
+jquery
+
+maven
+
+
+
+biaoti,jianjie,fengmian,yuedu,dianzan,pid,fabushijian
+
+
+
+
+
+
+<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.3.1</version>
+			</plugin>
+		</plugins>
+	</build>
+
+
+鱼遇于池，池渴，相濡以沫，相掬以湿，不若相忘于海
+
+
+<Resource 
+    name="jdbc/mysql"  
+    scope="Shareable"  
+    type="javax.sql.DataSource" 
+    factory="org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory" 
+    url="jdbc:mysql://localhost:3306/test" 
+    driverClassName ="com.mysql.jdbc.Driver" 
+    username="root" 
+    password="root"/>  
+
+
+本文档的编写为下阶段的设计、开发提供依据，为项目组成员对需求的详尽理解，以及在开发开发过程中的协同工作提供强有力的保证。同时本文档也作为项目评审验收的依据之一。
+
+
+
+
+
+
+
+
+
+@WebServlet("/checkcode")
+public class Yanzhengma extends HttpServlet {
+	
+	
+	 protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	        int width=100;
+	        int height = 30;
+	        //在内存中生成一张图片
+	        BufferedImage image = new BufferedImage(width,height,BufferedImage.TYPE_INT_RGB);
+	        Graphics graphics = image.getGraphics();//得到画笔
+	        graphics.setColor(Color.yellow);
+	        graphics.fillRect(0,0,width,height);//填充背景色
+	        //画边框
+	        graphics.setColor(Color.BLACK);
+	        graphics.drawRect(0,0,width-1,height-1);
+	        //生成验证码
+	        String str="ABCDEFGHIGKLMNOPQRSTUVWXYZ123456789%$#@";
+	        StringBuilder stringBuilder = new StringBuilder();
+	        String code="";
+	        Random random = new Random();
+	        int index =-1;
+	        graphics.setColor(Color.red);
+	        for(int i=1;i<=4;i++){
+	            index=random.nextInt(str.length());
+	            char ch = str.charAt(index);
+	            stringBuilder.append(ch);
+	            graphics.drawString(ch+"",width/5*i,height/2);
+	        }
+	        String codes = stringBuilder.toString();
+	        //把验证码存储到session中
+	        req.getSession().setAttribute("checkCode",codes);
+	        //生成干扰线
+	        graphics.setColor(Color.green);
+	        for (int i = 0; i < 5; i++) {
+	        	int x1=random.nextInt(width);
+	        	int x2=random.nextInt(width);
+	        	int y1=random.nextInt(height);
+	        	int y2=random.nextInt(height);
+	        	graphics.drawLine(x1,y1,x2,y2);
+	        	
+	        }
+	        ImageIO.write(image,"jpg",resp.getOutputStream());
+	}
+	 @Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		this.doGet(req, resp);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<Resource name="jndi/myjdbc"   
+            auth="Container"   
+            type="javax.sql.DataSource"   
+            driverClassName="com.mysql.jdbc.Driver"   
+            url="jdbc:mysql://localhost:3306/test_jieke1_2"   
+            username="root"   
+            password="root"   
+            maxActive="20"   
+            maxIdle="10"   
+            maxWait="10000"/> 
+
+
+
+DbUtils组件
+
+
+
+
+
+
+
+
+
+北京诺君安信息技术有限公司
+外交部电子护照系统
+京市海淀区大钟寺东路168号中嘉大厦
+JBOSS
+
+电子空白护照,出国计划,团组成员表,签证事项,驻华大使管,打印批件
+
+高校产教融合育人
+中软国际教育科技集团
+李玫瑾:教育孩子,性格比智力更重要!
+1。Servlet也是java类,必须实现javax.servlet.Servlet接口
+2。主要工作在service方法中进行
+3。把当前Servlet注册到tomcat中，修改web.xml,并且指定处理那个URL，即那个请求调用当前Servlet
+
+https://www.zretc.net/
+海淀区中关村东路
+
+Servlet是一个组件
+也是一个普通的java类，实现了Servlet接口，叫做Servlet
+Servlet必须要在tomcat注册，并且指定对应的URL
+
+
+36 
+36
+28
+4
+56
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+inputs:na(7),na2(33),na3(53);
+variables:var0(0),var1(0),var2(0),var3(0),var4(0),var5(0),var6(0),var7(0);
+
+var0 = (Highest(h,na)+Lowest(l,na))/2;
+var1 = (highest(h,na2)+lowest(l,na2))/2;
+var2 = (var0+var1)/2;
+var3 = var2[na2];
+var4 = (highest(h,na3)+lowest(l,na3))/2
+var5 = var4[na2];
+
+if close>var3 and close>var5 and close>var1 and var0>var1 and var1>var3 and var1>var5
+then buy next bar at market;
+if close<var3 and close<var5 and close<var1 and var0<var1 and var1<var3 and var1<var5
+then sellshort next bar at market;
+
+if close<var3 and close<var5 then sell next bar at market;
+if close>var3 and close>var5 then buytocover next bar at market; 
+
+//-------------------------------
+
+inputs:ma(80),fd(2);
+variables:var0(0);
+
+var0 = Average(close,ma);
+condition1 = CountIf(close>var0,fd) = fd;
+condition2 = CountIf(close<var0,fd) = fd;
+if condition1 and close[fd] cross above var0[fd] then buy next bar at market;
+if condition2 and close[fd] cross under var0[fd] then sellshort next bar at market;
+
+
+
+父赌母病弟读书，刚做不久还不熟，兄弟姐妹全靠我，前夫家暴又好赌，自己带娃没收入，无奈才走不归路,她给你说的哪一个故事？
+
+
+
+
+
+http://localhost:8080/
+MultiCharts
+
+
+http://localhost:8080/
+
+
+
+
+使用场景主要内容去
+489771552
+529787495
+529131975
+698650294
+154853821
+701518694
+
+
+
+他们的摩西是不是真的，我不知道，我们的摩西带领他的小伙伴，走了2W多里，最后到达陕北，这是真的，成功后在圣殿前喊出“人民万岁”，并最终对黄老爷们说，“没有你对我很重要”
+
+Web 开发技术 > Web API 接口参考 > Navigator > Navigator.mediaDevices
+
+Navigator.mediaDevices
+ 
+mediaDevices 是 Navigator 只读属性，返回一个 MediaDevices 对象，该对象可提供对相机和麦克风等媒体输入设备的连接访问，也包括屏幕共享。
+语法
+var mediaDevices = navigator.mediaDevices;
+ 返回值
+MediaDevices 是一个单例对象。通常，您只需直接使用此对象的成员，例如通过调用navigator.mediaDevices.getUserMedia() (en-US)。
+
+通过 MediaDevices.getUserMedia() 获取用户多媒体权限时，需要注意其只工作于以下三种环境：
+
+localhost 域
+开启了 HTTPS 的域
+使用 file:/// 协议打开的本地文件
+其他情况下，比如在一个 HTTP 站点上，navigator.mediaDevices 的值为 undefined。
+
+如果想要 HTTP 环境下也能使用和调试 MediaDevices.getUserMedia()，可通过开启 Chrome 的相应参数。
+陶
+
+IntelliJ IDEA
+
+面向对象程序设计【企】
+《JavaEE课程设计[企]》
+
+//15515607093
+
+0.接下来设计结束项目
+1.时间显示页面问题
+2.时间在数据库中的存
+
+3.页面提交框架
+
+http://10.3.26.70:8080/
+
+<jsp:useBean id="student" scope="application" class="com.model.Student"/>
+<jsp:setProperty property="name" name="student" value="李四"/>
+<jsp:setProperty property="age" name="student" value="13"/>
+<jsp:getProperty property="name" name="student"/>
+<jsp:getProperty property="age" name="student"/>
+uname=张三&upwd=234
+[
+Banji https://www.ssxzxl1.com/sise/sise_online/luanlun_mgxhdb78/luanlun_mgxhdb78.mp4
+	[bid=1, bname=19级本三java Web班, 
+		ls=[
+		Student [stuid=6, stuName=刘德华, stuNo=123, stuAddress=hk], 
+		Student [stuid=11, stuName=4444, stuNo=44, stuAddress=44], 
+		Student [stuid=14, stuName=张三, stuNo=123, stuAddress=留个脚印], 
+		Student [stuid=15, stuName=李四, stuNo=123, stuAddress=123]
+		]	
+	], 
+Banji 
+	[bid=2, bname=19级本三java班, 
+		ls=[
+		Student [stuid=12, stuName=55555, stuNo=55, stuAddress=55], 
+		Student [stuid=13, stuName=111111222222, stuNo=222, stuAddress=222], 
+		Student [stuid=14, stuName=张三, stuNo=123, stuAddress=留个脚印], 
+		Student [stuid=15, stuName=李四, stuNo=123, stuAddress=123]
+		]
+	], 
+Banji 
+	[bid=3, bname=19级本三python班, 
+		ls=[
+		Student [stuid=4, stuName=李五, stuNo=1234567890, stuAddress=上海市，浦东区，复旦软件园区], 
+		Student [stuid=10, stuName=aaaa, stuNo=123, stuAddress=222], 
+		Student [stuid=14, stuName=张三, stuNo=123, stuAddress=留个脚印]
+		]
+	], 
+Banji 
+	[bid=5, bname=19级本三java EE班, 
+		ls=[
+		Student [stuid=1, stuName=李四, stuNo=123123321, stuAddress=内蒙古省，乌海市], 
+		Student [stuid=7, stuName=赵7, stuNo=123, stuAddress=hk], 
+		Student [stuid=12, stuName=55555, stuNo=55, stuAddress=55], 
+		Student [stuid=16, stuName=周硕, stuNo=67890, stuAddress=辽宁]
+		]
+	]
+]
+《战国野心家》
+《秦吏》
+《汉阙》
+《三国之最风流》
+《曹贼》
+《汉祚高门》
+《唐骑》
+《北颂》
+《绍宋》
+《新宋》
+《宰执天下》
+《明朝败家子》
+《金鳞开》
